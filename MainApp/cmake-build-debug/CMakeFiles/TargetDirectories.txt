@@ -1,0 +1,3 @@
+C:/Programming Projects/JaProjekt/MainApp/cmake-build-debug/CMakeFiles/MainApp.dir
+C:/Programming Projects/JaProjekt/MainApp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Programming Projects/JaProjekt/MainApp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
