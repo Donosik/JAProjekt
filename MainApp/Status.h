@@ -1,0 +1,14 @@
+#ifndef MAINAPP_STATUS_H
+#define MAINAPP_STATUS_H
+
+enum class Status
+{
+    ASMCHOOSED,
+    CPPCHOOSED,
+    START,
+    CHANGETO1IMAGE,
+    CHANGETO2IMAGE,
+    CHANGETO3IMAGE
+};
+
+#endif MAINAPP_STATUS_H
