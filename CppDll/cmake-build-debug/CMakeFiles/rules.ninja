@@ -22,7 +22,7 @@ msvc_deps_prefix = Uwaga: w tym pliku:
 
 rule CXX_COMPILER__CppDll_Debug
   deps = msvc
-  command = C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -30,7 +30,7 @@ rule CXX_COMPILER__CppDll_Debug
 # Rule for linking CXX shared library.
 
 rule CXX_SHARED_LIBRARY_LINKER__CppDll_Debug
-  command = cmd.exe /C "$PRE_LINK && C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E vs_link_dll --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WINDOW~4\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WINDOW~4\10\bin\100190~1.0\x86\mt.exe --manifests $MANIFESTS -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /dll /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES  && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E vs_link_dll --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WINDOW~4\10\bin\100190~1.0\x64\rc.exe --mt=C:\PROGRA~2\WINDOW~4\10\bin\100190~1.0\x64\mt.exe --manifests $MANIFESTS -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /dll /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES  && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
 
@@ -47,7 +47,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S"C:\Programming Projects\JaProjekt\CppDll" -B"C:\Programming Projects\JaProjekt\CppDll\cmake-build-debug"
+  command = C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S"C:\Programming Projects\JAProjekt\CppDll" -B"C:\Programming Projects\JAProjekt\CppDll\cmake-build-debug"
   description = Re-running CMake...
   generator = 1
 

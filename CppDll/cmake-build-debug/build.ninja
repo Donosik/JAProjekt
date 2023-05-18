@@ -39,7 +39,7 @@ include CMakeFiles\rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:\Programming$ Projects\JaProjekt\CppDll\cmake-build-debug\
+cmake_ninja_workdir = C$:\Programming$ Projects\JAProjekt\CppDll\cmake-build-debug\
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target CppDll
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = C$:\Programming$ Projects\JaProjekt\CppDll\cmake-build-deb
 
 build cmake_object_order_depends_target_CppDll: phony || CMakeFiles\CppDll.dir
 
-build CMakeFiles\CppDll.dir\library.cpp.obj: CXX_COMPILER__CppDll_Debug C$:\Programming$ Projects\JaProjekt\CppDll\library.cpp || cmake_object_order_depends_target_CppDll
+build CMakeFiles\CppDll.dir\library.cpp.obj: CXX_COMPILER__CppDll_Debug C$:\Programming$ Projects\JAProjekt\CppDll\library.cpp || cmake_object_order_depends_target_CppDll
   DEFINES = -DCppDll_EXPORTS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++latest
   OBJECT_DIR = CMakeFiles\CppDll.dir
@@ -67,7 +67,7 @@ build CMakeFiles\CppDll.dir\library.cpp.obj: CXX_COMPILER__CppDll_Debug C$:\Prog
 
 build CppDll.dll CppDll.lib: CXX_SHARED_LIBRARY_LINKER__CppDll_Debug CMakeFiles\CppDll.dir\library.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\CppDll.dir
   POST_BUILD = cd .
@@ -83,7 +83,7 @@ build CppDll.dll CppDll.lib: CXX_SHARED_LIBRARY_LINKER__CppDll_Debug CMakeFiles\
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Programming Projects\JaProjekt\CppDll\cmake-build-debug" && C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Programming Projects\JAProjekt\CppDll\cmake-build-debug" && C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -94,7 +94,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Programming Projects\JaProjekt\CppDll\cmake-build-debug" && C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S"C:\Programming Projects\JaProjekt\CppDll" -B"C:\Programming Projects\JaProjekt\CppDll\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D "C:\Programming Projects\JAProjekt\CppDll\cmake-build-debug" && C:\Users\Damian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5787.29\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S"C:\Programming Projects\JAProjekt\CppDll" -B"C:\Programming Projects\JAProjekt\CppDll\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -112,7 +112,7 @@ build CppDll: phony CppDll.dll
 # =============================================================================
 
 #############################################
-# Folder: C:/Programming Projects/JaProjekt/CppDll/cmake-build-debug
+# Folder: C:/Programming Projects/JAProjekt/CppDll/cmake-build-debug
 
 build all: phony CppDll.dll
 
