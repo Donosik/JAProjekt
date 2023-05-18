@@ -1,7 +1,9 @@
 #include "LibraryWrapper.h"
 
-LibraryWrapper::LibraryWrapper()
+LibraryWrapper::LibraryWrapper(int threadNumber)
 {
+    SetThreadNumber(threadNumber);
+    name="dilatation";
     if (LoadAsmDLL())
     {
         asmLoaded = true;
@@ -21,7 +23,11 @@ LibraryWrapper::LibraryWrapper()
         cppLoaded = false;
     }
     dlllibrary = NONE;
-    threadNumber = 1;
+}
+
+void LibraryWrapper::SetThreadNumber(int x)
+{
+    threadNumber = x;
 }
 
 void LibraryWrapper::UseFunction()
@@ -87,6 +93,51 @@ void LibraryWrapper::Update(Status i)
             choosenImage = images[2];
         }
             break;
+        case Status::THREAD1:
+        {
+            SetThreadNumber(1);
+        }
+            break;
+        case Status::THREAD2:
+        {
+            SetThreadNumber(2);
+        }
+            break;
+        case Status::THREAD4:
+        {
+            SetThreadNumber(4);
+        }
+            break;
+        case Status::THREAD8:
+        {
+            SetThreadNumber(8);
+        }
+            break;
+        case Status::THREAD16:
+        {
+            SetThreadNumber(16);
+        }
+            break;
+        case Status::THREAD32:
+        {
+            SetThreadNumber(32);
+        }
+            break;
+        case Status::THREAD64:
+        {
+            SetThreadNumber(64);
+        }
+            break;
+        case Status::EROSION:
+        {
+            ChooseFunction("erosion");
+        }
+            break;
+        case Status::DILATATION:
+        {
+            ChooseFunction("dilatation");
+        }
+            break;
         default:
         {
             std::cout << "Nie ma takiego statusu" << std::endl;
@@ -94,13 +145,49 @@ void LibraryWrapper::Update(Status i)
     }
 }
 
+void LibraryWrapper::ChooseFunction(std::string name)
+{
+    this->name=name;
+    if(dlllibrary==ASM)
+    {
+        LoadAsmDLL();
+    }
+    else if(dlllibrary==CPP)
+    {
+        LoadCppDLL();
+    }
+}
 
 void LibraryWrapper::UseAsmFunction()
 {
     if (asmLoaded)
     {
         resultImage = choosenImage;
-        //std::cout << asmProc(20) << std::endl;
+
+        std::vector<std::future<sf::Image>> processedVector;
+        int i = 0;
+        for (; (i + threadNumber) < choosenImage.getSize().x; i += threadNumber)
+        {
+            for (int j = 0; j < threadNumber; j++)
+            {
+                processedVector.push_back(std::async(InnerLoop(), asmProc, choosenImage, i + j));
+            }
+            for (int j = 0; j < threadNumber; j++)
+            {
+                sf::IntRect r(i + j, 0, 1, choosenImage.getSize().y);
+                resultImage.copy(processedVector[j].get(), i + j, 0, r);
+            }
+            processedVector.clear();
+        }
+        for (; i < choosenImage.getSize().x; i++)
+        {
+            auto future = std::async(InnerLoop(), asmProc, choosenImage, i);
+            sf::Image processed = future.get();
+            sf::IntRect r(i, 0, 1, choosenImage.getSize().y);
+            resultImage.copy(processed, i, 0, r);
+
+        }
+        choosenImage = resultImage;
     }
 }
 
@@ -110,37 +197,39 @@ void LibraryWrapper::UseCppFunction()
     {
         resultImage = choosenImage;
 
+        std::vector<std::future<sf::Image>> processedVector;
         int i = 0;
         for (; (i + threadNumber) < choosenImage.getSize().x; i += threadNumber)
         {
-            for(int j=0;j<threadNumber;j++)
+            for (int j = 0; j < threadNumber; j++)
             {
-                CppInner cppInner;
-                cppInner.SetValues(cppProc,choosenImage,i);
-                std::promise<sf::Image> p;
-                std::future<sf::Image>f=p.get_future();
-                std::thread t(cppInner,std::move(p));
-                threads.push_back(std::move(t));
-                resultImage.copy(f.get(),i,0,sf::IntRect(i,0,1,choosenImage.getSize().y));
+                processedVector.push_back(std::async(InnerLoop(), cppProc, choosenImage, i + j));
             }
+            for (int j = 0; j < threadNumber; j++)
+            {
+                sf::IntRect r(i + j, 0, 1, choosenImage.getSize().y);
+                resultImage.copy(processedVector[j].get(), i + j, 0, r);
+            }
+            processedVector.clear();
         }
         for (; i < choosenImage.getSize().x; i++)
         {
-            //CppInner(i);
-        }
+            auto future = std::async(InnerLoop(), cppProc, choosenImage, i);
+            sf::Image processed = future.get();
+            sf::IntRect r(i, 0, 1, choosenImage.getSize().y);
+            resultImage.copy(processed, i, 0, r);
 
+        }
         choosenImage = resultImage;
     }
 }
 
-
 bool LibraryWrapper::LoadAsmDLL()
 {
-
-    asmLib = LoadLibrary(TEXT("DLL_ASM.dll"));
+    asmLib = LoadLibrary(TEXT("JAAsm.dll"));
     if (asmLib != NULL)
     {
-        asmProc = (MYPROC) GetProcAddress(asmLib, "FProc");
+        asmProc = (MYPROC) GetProcAddress(asmLib, name.c_str());
         if (NULL != asmProc)
         {
             return true;
@@ -152,11 +241,10 @@ bool LibraryWrapper::LoadAsmDLL()
 
 bool LibraryWrapper::LoadCppDLL()
 {
-
     cppLib = LoadLibrary(TEXT("CppDll.dll"));
     if (cppLib != NULL)
     {
-        cppProc = (MYPROC) GetProcAddress(cppLib, "dilatation");
+        cppProc = (MYPROC) GetProcAddress(cppLib, name.c_str());
         if (NULL != cppProc)
         {
             return true;

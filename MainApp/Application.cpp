@@ -14,18 +14,32 @@ void Application::Initialize()
     texts.push_back("Asm");
     texts.push_back("C++");
 
+    std::vector<std::string> functionNames;
+    functionNames.push_back("Erosion");
+    functionNames.push_back("Dilatation");
+
     if (!font.loadFromFile("arial.ttf"))
     {
         std::cout << "Error occured during loading the font" << std::endl;
         throw std::exception("Failed to load font file");
     }
-    libraryWrapper = new LibraryWrapper();
+    int threadNumber= std::thread::hardware_concurrency();
+    if(threadNumber==0)
+    {
+        threadNumber=1;
+    }
 
-    GroupRadioButton *groupRadioButton = new GroupRadioButton(200, 70, 50, 50, 10, texts, font);
+    libraryWrapper = new LibraryWrapper(threadNumber);
+
+    GroupRadioButton *groupRadioButton = new GroupRadioButton(200, 70, 50, 50, 10, texts, font,0);
     groupRadioButton->AddObserver(libraryWrapper);
     views.push_back(groupRadioButton);
 
-    Button *buttonStart = new Button(200, 70, 300, 50, "Start", font, Status::START);
+    GroupRadioButton *functionsGroupRadioButton=new GroupRadioButton(220,70,300,50,20,functionNames,font,13,false);
+    functionsGroupRadioButton->AddObserver(libraryWrapper);
+    views.push_back(functionsGroupRadioButton);
+
+    Button *buttonStart = new Button(200, 70, 50,230, "Start", font, Status::START);
     buttonStart->AddObserver(libraryWrapper);
     views.push_back(buttonStart);
 
@@ -34,40 +48,40 @@ void Application::Initialize()
     images.push_back(imageLoader.GetImageFromFile("Image2.bmp"));
     images.push_back(imageLoader.GetImageFromFile("Image3.bmp"));
 
-    ImageButton *imageButton1 = new ImageButton(512, 288, 50, 250);
+    ImageButton *imageButton1 = new ImageButton(512, 288, 50, 350);
     imageButton1->AddImage(images[0]);
     imageButton1->AddImage(images[1]);
     imageButton1->AddImage(images[2]);
-    imageButton1->SetImage(0);
-    imageButton1->SetScale();
     views.push_back(imageButton1);
 
     libraryWrapper->SetImages(images);
 
-    Button *buttonImage1 = new Button(200, 70, 550, 50, "Image 1", font, Status::CHANGETO1IMAGE);
+    Button *buttonImage1 = new Button(200, 70, 300, 130, "Image 1", font, Status::CHANGETO1IMAGE);
     buttonImage1->AddObserver(imageButton1);
     buttonImage1->AddObserver(libraryWrapper);
     views.push_back(buttonImage1);
 
-    Button *buttonImage2 = new Button(200, 70, 800, 50, "Image 2", font, Status::CHANGETO2IMAGE);
+    Button *buttonImage2 = new Button(200, 70, 550, 130, "Image 2", font, Status::CHANGETO2IMAGE);
     buttonImage2->AddObserver(imageButton1);
     buttonImage2->AddObserver(libraryWrapper);
     views.push_back(buttonImage2);
 
-    Button *buttonImage3 = new Button(200, 70, 1050, 50, "Image 3", font, Status::CHANGETO3IMAGE);
+    Button *buttonImage3 = new Button(200, 70, 800, 130, "Image 3", font, Status::CHANGETO3IMAGE);
     buttonImage3->AddObserver(imageButton1);
     buttonImage3->AddObserver(libraryWrapper);
     views.push_back(buttonImage3);
 
-    ResultImage* resultImage=new ResultImage(512,288,600,250);
-    resultImage->SetImage(images[0]);
-    resultImage->SetScale();
+    ResultImage* resultImage=new ResultImage(512,288,600,350);
     libraryWrapper->ImageObservable::AddObserver(resultImage);
     views.push_back(resultImage);
 
-    ShowTime* showTime=new ShowTime(200,70,550,150,"0 us",font);
+    ShowTime* showTime=new ShowTime(200,70,600,250,"0 us",font);
     views.push_back(showTime);
     libraryWrapper->TimeObservable::AddObserver(showTime);
+
+    Slider* slider=new Slider(220,300,250,font,threadNumber);
+    slider->AddObserver(libraryWrapper);
+    views.push_back(slider);
 }
 
 

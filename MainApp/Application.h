@@ -12,6 +12,7 @@
 #include "ImageLoader.h"
 #include "ResultImage.h"
 #include "ShowTime.h"
+#include "Slider.h"
 
 class Application
 {

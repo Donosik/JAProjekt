@@ -7,6 +7,16 @@ ImageButton::ImageButton(int width, int height, int xPos, int yPos)
     this->xPos = xPos;
     this->yPos = yPos;
 
+    frameWidth=2;
+
+    background.setPosition(xPos - frameWidth, yPos - frameWidth);
+    background.setSize(sf::Vector2f(width + 2*frameWidth, height + 2*frameWidth));
+    background.setFillColor(sf::Color::Green);
+
+    sf::Image img;
+    img.create(width,height,sf::Color::Black);
+    AddImage(img);
+    SetImage(0);
 }
 
 void ImageButton::AddImage(sf::Image img)
@@ -20,9 +30,10 @@ void ImageButton::SetImage(int i)
     {
         choosen=i;
         texture.loadFromImage(images[i]);
+        image=sf::Sprite();
         image.setTexture(texture);
         image.setPosition(xPos, yPos);
-
+        SetScale();
     }
 }
 
@@ -33,11 +44,13 @@ sf::Image ImageButton::GetImage()
 
 void ImageButton::SetScale()
 {
-    sf::Vector2u imgSize = images[0].getSize();
 
-    float xSize = (float) width / imgSize.x;
-    float ySize = (float) height / imgSize.y;
-    image.scale(xSize, ySize);
+    sf::Vector2u imgSize = images[choosen].getSize();
+    float xSize = (float)width/imgSize.x;
+    float ySize = (float)height/imgSize.y;
+
+    float scale = 1;
+    image.setScale(xSize * scale, ySize * scale);
 }
 
 
@@ -47,17 +60,17 @@ void ImageButton::Update(Status i)
     {
         case Status::CHANGETO1IMAGE:
         {
-            SetImage(0);
+            SetImage(1);
         }
             break;
         case Status::CHANGETO2IMAGE:
         {
-            SetImage(1);
+            SetImage(2);
         }
             break;
         case Status::CHANGETO3IMAGE:
         {
-            SetImage(2);
+            SetImage(3);
         }
             break;
     }
@@ -77,5 +90,6 @@ bool ImageButton::CheckEvent(sf::Event event)
 
 void ImageButton::Draw(sf::RenderWindow &window)
 {
+    window.draw(background);
     window.draw(image);
 }

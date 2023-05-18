@@ -17,6 +17,8 @@ class ImageButton : public IStatusObserver, public IView
     std::vector<sf::Image> images;
     sf::Texture texture;
     sf::Sprite image;
+    sf::RectangleShape background;
+    int frameWidth;
 public:
     ImageButton(int width, int height, int xPos, int yPos);
 

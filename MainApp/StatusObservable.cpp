@@ -15,5 +15,5 @@ void StatusObservable::AddObserver(IStatusObserver *x)
 
 void StatusObservable::DeleteObserver(IStatusObserver *x)
 {
-   observers.erase(std::remove(observers.begin(),observers.end(),x),observers.end());
+    observers.erase(std::remove(observers.begin(),observers.end(),x),observers.end());
 }

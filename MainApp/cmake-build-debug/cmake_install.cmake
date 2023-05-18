@@ -1,4 +1,4 @@
-# Install script for directory: C:/Programming Projects/JaProjekt/MainApp
+# Install script for directory: C:/Programming Projects/JAProjekt/MainApp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Programming Projects/JaProjekt/MainApp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Programming Projects/JAProjekt/MainApp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

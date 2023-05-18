@@ -21,10 +21,10 @@ enum DLLLIBRARY
     CPP
 };
 
-class CppInner
+class InnerLoop
 {
 public:
-    void operator()(std::promise<sf::Image> &&result)
+    sf::Image operator()(MYPROC proc, sf::Image choosenImage, int i)
     {
         sf::Image resultImage = choosenImage;
         int array[8];
@@ -45,9 +45,8 @@ public:
                 array[6] = ConvertColorToInt(choosenImage.getPixel(i + 1, j));
                 array[7] = ConvertColorToInt(choosenImage.getPixel(i + 1, j + 1));
 
-                if (cppProc(array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7]) == 1)
+                if (proc(array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7]) == 1)
                 {
-
                     resultImage.setPixel(i, j, sf::Color::Black);
                 }
                 else
@@ -56,18 +55,7 @@ public:
                 }
             }
         }
-        result.set_value(resultImage);
-    }
-
-    MYPROC cppProc;
-    sf::Image choosenImage;
-    int i;
-
-    void SetValues(MYPROC cppProc, sf::Image choosenImage, int i)
-    {
-        this->i=i;
-        this->choosenImage=choosenImage;
-        this->cppProc=cppProc;
+        return resultImage;
     }
 
     int ConvertColorToInt(sf::Color color)
@@ -92,15 +80,18 @@ class LibraryWrapper : public ImageObservable, public TimeObservable, public ISt
     MYPROC cppProc;
     DLLLIBRARY dlllibrary;
     bool asmLoaded;
-    bool cppLoaded;
+    bool cppLoadedelapsed;;
     std::vector<sf::Image> images;
     sf::Image choosenImage;
     sf::Image resultImage;
-    sf::Time elapsed;
+    sf::Time
     std::vector<std::thread> threads;
     int threadNumber;
+    std::string name;
 public:
-    LibraryWrapper();
+    LibraryWrapper(int threadNumber);
+
+    void SetThreadNumber(int x);
 
     void UseFunction();
 
@@ -109,6 +100,8 @@ public:
     virtual void Update(Status i) override;
 
 private:
+    void ChooseFunction(std::string name);
+
     void UseAsmFunction();
 
     void UseCppFunction();

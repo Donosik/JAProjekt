@@ -14,6 +14,8 @@ class ResultImage : public IImageObserver,public IView
     sf::Image img;
     sf::Texture texture;
     sf::Sprite image;
+    sf::RectangleShape background;
+    int frameWidth;
 public:
     ResultImage(int width, int height, int xPos, int yPos);
     void SetScale();
