@@ -1,0 +1,14 @@
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\bin\Debug\netcoreapp3.1\JAProjekt.exe
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\bin\Debug\netcoreapp3.1\JAProjekt.deps.json
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\bin\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.json
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\bin\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.dev.json
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\bin\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\bin\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.csproj.AssemblyReference.cache
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.AssemblyInfoInputs.cache
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.AssemblyInfo.cs
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.csproj.CoreCompileInputs.cache
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Programming Projects\JaProjekt\JAProjekt\JAProjekt\obj\Debug\netcoreapp3.1\JAProjekt.genruntimeconfig.cache

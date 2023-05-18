@@ -1,0 +1,42 @@
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.exe
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.deps.json
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.json
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.dev.json
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.csproj.AssemblyReference.cache
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.AssemblyInfoInputs.cache
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.AssemblyInfo.cs
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.csproj.CoreCompileInputs.cache
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Programming Projects\JaProjekt\JaProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.genruntimeconfig.cache
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.exe
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.deps.json
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.json
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.dev.json
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.csproj.AssemblyReference.cache
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.AssemblyInfoInputs.cache
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.AssemblyInfo.cs
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.csproj.CoreCompileInputs.cache
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Programming Projects\JaProjekt1\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.genruntimeconfig.cache
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.exe
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.deps.json
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.json
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.runtimeconfig.dev.json
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\bin\x64\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.csproj.AssemblyReference.cache
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.AssemblyInfoInputs.cache
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.AssemblyInfo.cs
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.csproj.CoreCompileInputs.cache
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.dll
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.pdb
+C:\Users\agag6\OneDrive\Desktop\Studia - SEMESTR 5\Języki Asemblerowe - Projekt\JAProjekt\JAProjekt\JAProjekt\obj\x64\Debug\netcoreapp3.1\JAProjekt.genruntimeconfig.cache

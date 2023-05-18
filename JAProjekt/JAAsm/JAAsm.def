@@ -1,0 +1,3 @@
+LIBRARY JAAsm
+EXPORTS dilatation
+EXPORTS erosion

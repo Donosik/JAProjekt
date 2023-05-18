@@ -1,0 +1,76 @@
+﻿Środowisko przy rozpoczęciu kompilacji:
+ALLUSERSPROFILE = C:\ProgramData
+APPDATA = C:\Users\Damian\AppData\Roaming
+CommonProgramFiles = C:\Program Files (x86)\Common Files
+CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
+CommonProgramW6432 = C:\Program Files\Common Files
+COMPLUS_InstallRoot = 
+COMPLUS_Version = 
+COMPUTERNAME = DAMIAN-PC
+ComSpec = C:\Windows\system32\cmd.exe
+DriverData = C:\Windows\System32\Drivers\DriverData
+ForceIdentityAuthenticationType = Embedded
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING = Default
+HOMEDRIVE = C:
+HOMEPATH = \Users\Damian
+LOCALAPPDATA = C:\Users\Damian\AppData\Local
+LOGONSERVER = \\DAMIAN-PC
+MSBuildLoadMicrosoftTargetsReadOnly = true
+NUMBER_OF_PROCESSORS = 8
+OneDrive = C:\Users\Damian\OneDrive
+OS = Windows_NT
+Path = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\CMake\bin;C:\opencv\build\x64\vc15\bin;C;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Damian\AppData\Local\Microsoft\WindowsApps;C:\Users\Damian\.dotnet\tools;C:\Users\Damian\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\Damian\.dotnet\tools
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PkgDefApplicationConfigFile = C:\Users\Damian\AppData\Local\Microsoft\VisualStudio\16.0_e091e331\devenv.exe.config
+PROCESSOR_ARCHITECTURE = x86
+PROCESSOR_ARCHITEW6432 = AMD64
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+PROCESSOR_LEVEL = 6
+PROCESSOR_REVISION = 3c03
+ProgramData = C:\ProgramData
+ProgramFiles = C:\Program Files (x86)
+ProgramFiles(x86) = C:\Program Files (x86)
+ProgramW6432 = C:\Program Files
+PSModulePath = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC = C:\Users\Public
+ServiceHubLogSessionKey = EE65C218
+SESSIONNAME = Console
+SignInWithHomeTenantOnly = False
+SystemDrive = C:
+SystemRoot = C:\Windows
+TEMP = C:\Users\Damian\AppData\Local\Temp
+ThreadedWaitDialogDpiContext = -4
+TMP = C:\Users\Damian\AppData\Local\Temp
+USERDOMAIN = DAMIAN-PC
+USERDOMAIN_ROAMINGPROFILE = DAMIAN-PC
+USERNAME = Damian
+USERPROFILE = C:\Users\Damian
+VisualStudioDir = C:\Users\Damian\Documents\Visual Studio 2019
+VisualStudioEdition = Microsoft Visual Studio Community 2019
+VisualStudioVersion = 16.0
+VSAPPIDDIR = C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\
+VSAPPIDNAME = devenv.exe
+VSLANG = 1045
+VSSKUEDITION = Community
+windir = C:\Windows
+
+  Assembling JAAsm.asm...
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : a
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : b
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : c
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : d
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : e
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : f
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : g
+JAAsm.asm(39): warning A6004: procedure argument or local not referenced : h
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : a
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : b
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : c
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : d
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : e
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : f
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : g
+JAAsm.asm(79): warning A6004: procedure argument or local not referenced : h
+     Trwa tworzenie biblioteki C:\Programming Projects\JAProjekt\JAProjekt\x64\Debug\JAAsm.lib i obiektu C:\Programming Projects\JAProjekt\JAProjekt\x64\Debug\JAAsm.exp
+  JAAsm.vcxproj -> C:\Programming Projects\JAProjekt\JAProjekt\x64\Debug\JAAsm.dll
